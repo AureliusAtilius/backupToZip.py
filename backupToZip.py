@@ -15,10 +15,10 @@ def backupToZip(folder):
                         break
                 number +=1
         
-        #TODO: Create the ZIP file.
+        # Create the ZIP file.
         print("Creating {}...".format(zipFilename))
         backupZip = zipfile.ZipFile(zipFilename,'w')
-        #TODO: Walk the entire folder tree and compress the files in each folder.
+        # Walk the entire folder tree and compress the files in each folder.
         for foldername,subfolders,filenames in os.walk(folder):
                 print(f'Adding files in {foldername}...')
                 # Add the current folder to the ZIP file.
